@@ -3,6 +3,10 @@
 
 **Databricks · PySpark · Python · SQL · Delta Lake · Unity Catalog · Lakeflow Jobs**
 
+## Dataset
+
+[Synthetic IT Support Tickets — Kaggle](https://www.kaggle.com/datasets/ahsanneural/synthetic-it-support-tickets)
+
 ## Project Overview
 
 I built this project to practise Data Engineering using a dataset of 100,000 synthetic IT support tickets.
@@ -19,9 +23,21 @@ The project follows the **Medallion Architecture**, with three layers:
 
 ## Data Processing
 
-### 1. Exploratory Data Analysis (EDA)
+### 1. Exploratory Data Analysis
 
-I started by exploring the dataset, checking missing values, duplicate ticket IDs and ticket categories.
+Before creating the pipeline, I explored the dataset to better understand the tickets, their categories and how they changed over time.
+
+### Tickets by Priority
+
+![Tickets by Priority](images/tickets_priority.png)
+
+### Monthly Ticket Volume
+
+![Monthly Ticket Volume](images/monthly_tickets.png)
+
+### Tickets by Issue Type
+
+![Tickets by Issue Type](images/issue_types.png)
 
 ### 2. Bronze Layer
 
@@ -37,10 +53,7 @@ I created reporting tables for ticket KPIs, monthly trends, priority performance
 
 ## Pipeline Orchestration
 
-I configured a Databricks Lakeflow Job to run the notebooks in order:
+I used Databricks Lakeflow Jobs to run the Bronze, Silver and Gold notebooks in order. Each task runs after the previous one finishes successfully.
 
-**Bronze → Silver → Gold**
+![Databricks Job - Successful Execution](images/databricks_job.png)
 
-## Dataset
-
-[Synthetic IT Support Tickets — Kaggle](https://www.kaggle.com/datasets/ahsanneural/synthetic-it-support-tickets)
