@@ -79,7 +79,7 @@ I also created a few visualizations to better understand the distribution of tic
 
 ![Tickets by Issue Type](images/Tickets%20By%20Issue%20Type.png)
 
-### 2. Bronze Layer — Data Ingestion
+### 2. Bronze Layer - Data Ingestion
 
 The Bronze layer stores the original dataset before applying cleaning transformations.
 
@@ -87,9 +87,7 @@ I used PySpark to read the CSV file from a Unity Catalog Volume, automatically i
 
 I also added an ingestion timestamp to record when the data was loaded.
 
-**Output:** `db_projects.data_engineering.ID001_Bronze_Tickets`
-
-### 3. Silver Layer — Data Cleaning and Validation
+### 3. Silver Layer - Data Cleaning and Validation
 
 The Silver layer prepares the data for analysis by applying cleaning rules and creating additional columns.
 
@@ -106,9 +104,7 @@ One important detail was handling the `NA` region code, which represents North A
 
 I also excluded CSAT scores of `0` from satisfaction calculations, since these represent tickets without a survey response.
 
-**Output:** `db_projects.data_engineering.ID001_Silver_Tickets`
-
-### 4. Gold Layer — Data Aggregation
+### 4. Gold Layer - Data Aggregation
 
 The Gold layer uses the cleaned Silver data to create aggregated tables for reporting.
 
@@ -170,5 +166,4 @@ Some improvements I would like to explore in the future include:
 
 - Incremental data ingestion instead of full reloads
 - Additional automated data quality checks
-- Monitoring and alerting for pipeline failures
 - Expanding the Gold layer with additional reporting metrics
