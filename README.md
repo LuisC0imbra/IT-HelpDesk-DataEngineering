@@ -19,7 +19,7 @@ The project follows the **Medallion Architecture**, with three layers:
 
 ## Pipeline Architecture
 
-![Medallion Architecture](images/project_overview.png)
+![Medallion Architecture](images/Medallion_Architecture)
 
 ## Data Processing
 
@@ -29,15 +29,15 @@ Before creating the pipeline, I explored the dataset to better understand the ti
 
 ### Tickets by Priority
 
-![Tickets by Priority](images/tickets_priority.png)
+![Tickets by Priority](images/Ticket_Dist_By_Priority.png)
 
 ### Monthly Ticket Volume
 
-![Monthly Ticket Volume](images/monthly_tickets.png)
+![Monthly Ticket Volume](images/Monthly Ticket Volume.png)
 
 ### Tickets by Issue Type
 
-![Tickets by Issue Type](images/issue_types.png)
+![Tickets by Issue Type](images/Ticke.png)
 
 ### 2. Bronze Layer
 
